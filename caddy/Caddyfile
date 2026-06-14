@@ -1,3 +1,7 @@
 shadowabyss.dev, www.shadowabyss.dev {
-    reverse_proxy backend:8000
+    reverse_proxy backend:8000 {
+        header_up X-Forwarded-Proto https
+    }
+    # Автоматически заменяем http на https во всем HTML
+    substitute http://shadowabyss.dev/ https://shadowabyss.dev/
 }
