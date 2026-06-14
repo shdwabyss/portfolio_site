@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./app  
+    container_name: backend
+    restart: always
+    expose:
+      - 8000
+    networks:
+      - production_network
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy_proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile 
+      - caddy_data:/data                       
+      - caddy_config:/config                     
+    depends_on:
+      - backend   
+    networks:
+      - production_network
+
+networks:
+  production_network:
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:

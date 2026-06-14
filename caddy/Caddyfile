@@ -1,0 +1,3 @@
+shadowabyss.dev, www.shadowabyss.dev {
+    reverse_proxy backend:8000
+}

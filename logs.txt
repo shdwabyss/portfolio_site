@@ -1,0 +1,441 @@
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
+backend  | Traceback (most recent call last):
+backend  |   File "/usr/local/bin/uvicorn", line 6, in <module>
+backend  |     sys.exit(main())
+backend  |              ~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+backend  |     return self.main(*args, **kwargs)
+backend  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1445, in main
+backend  |     rv = self.invoke(ctx)
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+backend  |     return ctx.invoke(self.callback, **ctx.params)
+backend  |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+backend  |     return callback(*args, **kwargs)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+backend  |     run(
+backend  |     ~~~^
+backend  |         app,
+backend  |         ^^^^
+backend  |     ...<48 lines>...
+backend  |         reset_contextvars=reset_contextvars,
+backend  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |     )
+backend  |     ^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+backend  |     config.load_app()
+backend  |     ~~~~~~~~~~~~~~~^^
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+backend  |     return import_from_string(self.app)
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+backend  |     raise exc from None
+backend  |   File "/usr/local/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+backend  |     module = importlib.import_module(module_str)
+backend  |   File "/usr/local/lib/python3.14/importlib/__init__.py", line 88, in import_module
+backend  |     return _bootstrap._gcd_import(name[level:], package, level)
+backend  |            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+backend  |   File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+backend  |   File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+backend  |   File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+backend  |   File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+backend  |   File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+backend  |   File "/app/main.py", line 8, in <module>
+backend  |     from app.core.logging import logger
+backend  | ModuleNotFoundError: No module named 'app'
