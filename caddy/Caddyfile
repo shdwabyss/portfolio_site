@@ -1,6 +1,7 @@
 shadowabyss.dev, www.shadowabyss.dev {
     reverse_proxy backend:8000 {
-        header_up X-Forwarded-Proto https
+        header_up X-Forwarded-Proto {scheme}
+        header_up X-Forwarded-Host {host}
+        header_up X-Forwarded-For {remote_host}
     }
-    substitute http://shadowabyss.dev/ https://shadowabyss.dev/
 }
